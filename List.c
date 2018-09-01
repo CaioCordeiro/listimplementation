@@ -34,7 +34,7 @@ int adicionarnaposicao(struct Lista *aLista, int *info,int posicao){
         if(posicao == 1){
             aLista->tamanho = aLista->tamanho + 1;
             novo->info = info;
-            novo->proximo =aLista->dados;
+            novo->proximo =NULL;
             aLista->dados = novo;
             return(aLista->tamanho);
         }
@@ -44,7 +44,7 @@ int adicionarnaposicao(struct Lista *aLista, int *info,int posicao){
             }
             else{
                 anterior = aLista->dados;
-                for(int i = 0;(posicao-2);i++){
+                for(int i = 0;(i<posicao-2);i++){
                     anterior = anterior->proximo;
                 }
                 novo->proximo = anterior->proximo;
