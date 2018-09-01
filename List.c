@@ -78,7 +78,16 @@ int retira(struct Lista *aLista,int valor){
     }
 
 }
-
+int exibe(struct Lista *aLista){
+    struct elemento *aux;
+    aux = aLista->dados;
+    while(aux != NULL)
+    {
+        printf("%d ",aux->info);
+        aux = aux->proximo;
+    }
+    return 0;
+}
 int main(){
     
 
